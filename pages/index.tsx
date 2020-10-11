@@ -1,32 +1,29 @@
 import { NextPage } from 'next'
 import Link from 'next/link'
+import { useEffect } from 'react'
 import Layout from '../components/Layout'
+import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const IndexPage: NextPage = () => {
+  useEffect(() => {
+    let mainNav = document.getElementById("js-menu");
+    let navBarToggle = document.getElementById("js-navbar-toggle");
+    navBarToggle?.addEventListener("click", function () {
+      mainNav?.classList.toggle("active");
+    });
+  }, [])
   return (
     <Layout title="Home | Next.js + TypeScript Example">
       <ul className="card-list">
-        <li>
+        <li style={{ width: "100%" }}>
           <Link href="/donate-with-checkout">
-            <a className="card checkout-style-background">
-              <h2 className="bottom">Donate with Checkout</h2>
-              <img src="/checkout-one-time-payments.svg" />
-            </a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/donate-with-elements">
-            <a className="card elements-style-background">
-              <h2 className="bottom">Donate with Elements</h2>
-              <img src="/elements-card-payment.svg" />
-            </a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/use-shopping-cart">
-            <a className="card cart-style-background">
-              <h2 className="bottom">Use Shopping Cart</h2>
-              <img src="/use-shopping-cart.png" />
+            <a style={{ display: "flex", flexDirection: "column", width: "100%", alignItems: "center", justifyContent: "center" }} className="card checkout-style-background">
+              <h1>Purchase Lifetime License for $4.99</h1>
+              <button style={{ width: "150px", background: "black" }}>Buy Now</button>
+              <div>
+                <FontAwesomeIcon color="white" size={"1x"} icon={faCartPlus} />
+              </div>
             </a>
           </Link>
         </li>

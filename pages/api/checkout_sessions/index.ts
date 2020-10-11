@@ -26,7 +26,7 @@ export default async function handler(
         payment_method_types: ['card'],
         line_items: [
           {
-            name: 'Custom amount donation',
+            name: 'Payment Amount',
             amount: formatAmountForStripe(amount, CURRENCY),
             currency: CURRENCY,
             quantity: 1,

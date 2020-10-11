@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import CustomDonationInput from '../components/CustomDonationInput'
-import StripeTestCards from '../components/StripeTestCards'
+// import StripeTestCards from '../components/StripeTestCards'
 
 import getStripe from '../utils/get-stripejs'
 import { fetchPostJSON } from '../utils/api-helpers'
@@ -11,7 +11,7 @@ import * as config from '../config'
 const CheckoutForm = () => {
   const [loading, setLoading] = useState(false)
   const [input, setInput] = useState({
-    customDonation: Math.round(config.MAX_AMOUNT / config.AMOUNT_STEP),
+    customDonation: 5,
   })
 
   const handleInputChange: React.ChangeEventHandler<HTMLInputElement> = (e) =>
@@ -50,7 +50,7 @@ const CheckoutForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <CustomDonationInput
+      {/* <CustomDonationInput
         className="checkout-style"
         name={'customDonation'}
         value={input.customDonation}
@@ -59,14 +59,14 @@ const CheckoutForm = () => {
         step={config.AMOUNT_STEP}
         currency={config.CURRENCY}
         onChange={handleInputChange}
-      />
-      <StripeTestCards />
+      /> */}
+      {/* <StripeTestCards /> */}
       <button
         className="checkout-style-background"
         type="submit"
         disabled={loading}
       >
-        Donate {formatAmountForDisplay(input.customDonation, config.CURRENCY)}
+        Buy Now {formatAmountForDisplay(input.customDonation, config.CURRENCY)}
       </button>
     </form>
   )
