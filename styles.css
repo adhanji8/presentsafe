@@ -185,6 +185,15 @@ button:disabled {
 .card.checkout-style-background:hover {
   box-shadow: 20px 20px 60px #c4c4c4, -20px -20px 60px #c8c8c8;
 }
+
+button.checkout-style-background {
+  background-color: #2f2f2f;
+}
+
+button.checkout-style-background:hover {
+  background-color: rgb(18, 18, 18);
+}
+
 .cart-style-background {
   background: teal;
 }
