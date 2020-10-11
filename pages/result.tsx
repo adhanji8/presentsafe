@@ -63,6 +63,7 @@ const ResultPage: NextPage = () => {
         let a = document.createElement('a')
         a.download = 'app.zip'
         a.href = url
+        console.log(url);
         document.body.appendChild(a)
         a.click()
         a.remove()

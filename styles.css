@@ -160,7 +160,6 @@ button {
   margin-top: 10px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease;
   display: block;
   width: 100%;
 }
@@ -175,7 +174,6 @@ button:disabled {
 }
 .elements-style-background {
   background: var(--elements-color);
-  transition: box-shadow var(--transition-duration);
 }
 .card.elements-style-background:hover {
   box-shadow: 20px 20px 60px #464e9c, -20px -20px 60px #8896ff;
@@ -184,16 +182,11 @@ button:disabled {
   color: var(--checkout-color);
   border: 1px solid var(--checkout-color);
 }
-.checkout-style-background {
-  background: black;
-  transition: box-shadow var(--transition-duration);
-}
 .card.checkout-style-background:hover {
   box-shadow: 20px 20px 60px #c4c4c4, -20px -20px 60px #c8c8c8;
 }
 .cart-style-background {
   background: teal;
-  transition: box-shadow var(--transition-duration);
 }
 .card.cart-style-background:hover {
   box-shadow: 20px 20px 60px teal, -20px -20px 60px teal;
@@ -425,9 +418,6 @@ body {
   background-repeat: no-repeat;
 }
 
-body * {
-  transition: all 500ms ease-in-out;
-}
 
 
 .container {
