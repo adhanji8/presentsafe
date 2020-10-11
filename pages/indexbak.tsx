@@ -6,15 +6,8 @@ import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const IndexPage: NextPage = () => {
-  useEffect(() => {
-    let mainNav = document.getElementById("js-menu");
-    let navBarToggle = document.getElementById("js-navbar-toggle");
-    navBarToggle?.addEventListener("click", function () {
-      mainNav?.classList.toggle("active");
-    });
-  }, [])
   return (
-    <Layout title="Home | Next.js + TypeScript Example">
+    <Layout title="PresentSafe">
       <ul className="card-list">
         <li style={{ width: "100%" }}>
           <Link href="/donate-with-checkout">

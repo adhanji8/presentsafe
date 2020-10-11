@@ -246,11 +246,19 @@ pre {
   overflow: auto;
 }
 
+.mainhero {
+  width: 560px;
+  border-radius: 15px;
+}
+
 .banner {
   max-width: 825px;
   margin: 0 auto;
   font-size: 14px;
-  background: var(--body-color);
+  /* background: var(--body-color); */
+  background-image: url("/discount-tag.svg");
+  background-repeat: no-repeat;
+  background-color: white;
   color: #6a7c94;
   border-radius: 50px;
   box-shadow: -20px 20px 60px #abacad, 20px -20px 60px #ffffff;
@@ -264,7 +272,7 @@ pre {
   left: 0;
   right: 0;
   text-align: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 @media only screen and (max-width: 980px) {
@@ -655,7 +663,8 @@ h3 {
 @media screen and (max-width: 1380px){
 
   header div {
-    padding-top: 100px;   
+    padding-top: 20px;
+    flex-direction: column;
   }
   header div h1 {
     font-size: 55px;
@@ -706,9 +715,7 @@ h3 {
 @media screen and (max-width: 950px) {
 
   header img {
-    width: 730px;
-    right: -50%;
-    top: 520px;
+    width: 100% !important;
   }
 
   .newsletter {

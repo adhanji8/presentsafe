@@ -1,8 +1,8 @@
 import React, { ReactNode } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import CheckoutForm from './CheckoutForm'
 
 type Props = {
   children: ReactNode
@@ -27,10 +27,7 @@ const Layout = ({
               <img src="/logo.png" />
             </a>
           </Link>
-          <span className="navbar-toggle" id="js-navbar-toggle">
-            <FontAwesomeIcon size={"2x"} icon={faBars} />
-          </span>
-          <ul className="main-nav" id="js-menu">
+          {/* <ul className="main-nav" id="js-menu">
             <li>
               <a href="#" className="nav-links">Home</a>
             </li>
@@ -46,7 +43,7 @@ const Layout = ({
             <li>
               <a href="#" className="nav-links">Blog</a>
             </li>
-          </ul>
+          </ul> */}
         </nav>
         <React.Fragment>
           <header>
@@ -55,7 +52,7 @@ const Layout = ({
                 <h1>Clean Desktop. <br /> One Click.</h1>
                 <p>Never worry again about hiding your Desktop before screensharing in your next Zoom meeting.</p>
               </div>
-              <img style={{ width: 560, borderRadius: 15 }} src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2ff8e6d7-0736-46da-b3f7-e5645688db36/dd1ydw9-385c3ced-aafd-483e-8d4d-884530a14c27.png/v1/fill/w_1024,h_576,q_80,strp/windows_10__absorption__19h1_dark_wallpaper__by_xreamed_dd1ydw9-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD01NzYiLCJwYXRoIjoiXC9mXC8yZmY4ZTZkNy0wNzM2LTQ2ZGEtYjNmNy1lNTY0NTY4OGRiMzZcL2RkMXlkdzktMzg1YzNjZWQtYWFmZC00ODNlLThkNGQtODg0NTMwYTE0YzI3LnBuZyIsIndpZHRoIjoiPD0xMDI0In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.vwhy9tkHXIZ2zG8zjZlKM_tDgr9yzTuEPDOCZmVpW5c" />
+              <img className="mainhero" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2ff8e6d7-0736-46da-b3f7-e5645688db36/dd1ydw9-385c3ced-aafd-483e-8d4d-884530a14c27.png/v1/fill/w_1024,h_576,q_80,strp/windows_10__absorption__19h1_dark_wallpaper__by_xreamed_dd1ydw9-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD01NzYiLCJwYXRoIjoiXC9mXC8yZmY4ZTZkNy0wNzM2LTQ2ZGEtYjNmNy1lNTY0NTY4OGRiMzZcL2RkMXlkdzktMzg1YzNjZWQtYWFmZC00ODNlLThkNGQtODg0NTMwYTE0YzI3LnBuZyIsIndpZHRoIjoiPD0xMDI0In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.vwhy9tkHXIZ2zG8zjZlKM_tDgr9yzTuEPDOCZmVpW5c" />
             </div>
 
 
@@ -109,10 +106,8 @@ const Layout = ({
         {children}
       </div>
       <div className="banner">
-        <span>
-          All Rights Reserved
-          .
-      </span>
+        <p className="banner-text" style={{ minWidth: 345, fontWeight: 700, fontSize: 17, color: "#2f2f2f" }}>Heads up! Early bird discount.</p>
+        <CheckoutForm />
       </div>
     </>
   )
